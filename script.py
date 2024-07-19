@@ -31,16 +31,18 @@ def Proverka():
     if (M[1][1] == 'O' and M[1][2] == 'O' and M[1][3] == 'O') or (M[2][1] == 'O' and M[2][2] == 'O' and M[2][3] == 'O') or (M[3][1] == 'O' and M[3][2] == 'O' and M[3][3] == 'O') or (M[1][1] == 'O' and M[2][1] == 'O' and M[3][1] == 'O') or (M[1][2] == 'O' and M[2][2] == 'O' and M[3][2] == 'O') or (M[1][3] == 'O' and M[2][3] == 'O' and M[3][3] == 'O') or (M[1][1] == 'O' and M[2][2] == 'O' and M[3][3] == 'O') or (M[1][3] == 'O' and M[2][2] == 'O' and M[3][1] == 'O'):
         o = True
     if x and o:
-        return print('Ничья')
+        return print('\n-----Ничья-----')
     elif x:
-        return print('Выиграл Х')
+        return print('\n---Выиграл Х---')
     elif o:
-        return print('Выиграл O')
+        return print('\n---Выиграл O---')
     return True
 
 while True:
     n = Hod(n)
+    print('\n-------------\n')
     view()
     if n == 0:
         if not Proverka():
             break
+    print('\n-------------\n')
