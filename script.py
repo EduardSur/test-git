@@ -9,8 +9,12 @@ def view():
     return None
 
 def Hod(n):
-    x = int(input('Введи Х'))
-    y = int(input('Введи У'))
+    while True:
+        x = int(input('Введи Х'))
+        y = int(input('Введи У'))
+        if M[x][y] == '-':
+            break
+        print('Ячейка занята, введите другие координаты')
     if n == 0:
         M[x][y]='X'
         n = 1
